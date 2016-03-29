@@ -120,9 +120,9 @@
   <!-- To Enable linux debugger End -->
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <NMakeBuildCommandLine>c:\tools\pscp.exe -i $(PrivateKey) ".\main.cpp" $(RemoteUserName)@$(RemoteHostName):$(RemoteWorkingDirectory)/main.cpp
+    <NMakeBuildCommandLine>c:\tools\pscp.exe -i $(PrivateKey) ".\main.c" $(RemoteUserName)@$(RemoteHostName):$(RemoteWorkingDirectory)/main.c
 
-$(SecureShellExecutable) $(RemoteUserName)@$(RemoteHostName) -i $(PrivateKey) "cd $(RemoteWorkingDirectory);g++ -g main.cpp -o $(RemoteExecutable) -lpthread -std=c++14"</NMakeBuildCommandLine>
+$(SecureShellExecutable) $(RemoteUserName)@$(RemoteHostName) -i $(PrivateKey) "cd $(RemoteWorkingDirectory);gcc -g main.c -o $(RemoteExecutable)"</NMakeBuildCommandLine>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <NMakeBuildCommandLine>
