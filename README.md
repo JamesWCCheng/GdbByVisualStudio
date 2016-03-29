@@ -13,5 +13,5 @@ https://visualstudiogallery.msdn.microsoft.com/35dbae07-8c1a-4f9d-94b7-bac16cad9
 
 c:\tools\pscp.exe -i $(PrivateKey) ".\main.cpp" $(RemoteUserName)@$(RemoteHostName):$(RemoteWorkingDirectory)/main.cpp
 
-$(SecureShellExecutable) $(RemoteUserName)@$(RemoteHostName) -i $(PrivateKey) "cd $(RemoteWorkingDirectory);gcc -g main.cpp -o $(RemoteExecutable)"
+$(SecureShellExecutable) $(RemoteUserName)@$(RemoteHostName) -i $(PrivateKey) "cd $(RemoteWorkingDirectory);g++ -g main.cpp -o $(RemoteExecutable)"
 
